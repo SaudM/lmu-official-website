@@ -288,12 +288,17 @@ button {
 }
 
 .banner_taital {
-    width: 70%;
-    font-size: 60px;
+    width: auto;
+    font-size: 50px;
     color: #fefefd;
     font-weight: bold;
 }
-
+.banner_section_desc {
+    font-size: 18px;
+    width: auto;
+    color: #fff;
+    margin: 0;
+}
 .started_text {
     width: 180px;
     float: left;
