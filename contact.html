@@ -5,14 +5,11 @@
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <!-- mobile metas -->
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
       <!-- site metas -->
-      <title>Contact</title>
-      <meta name="keywords" content="">
-      <meta name="description" content="">
-      <meta name="author" content="">
+      <title>联系我们 | 灵眸·LMU.AI</title>
+      <meta name="keywords" content="LMU AI,灵眸,联系我们,微信,企业AI">
+      <meta name="description" content="联系灵眸（LMU AI）团队，获取企业AI解决方案咨询。">
+      <meta name="author" content="LMU AI">
       <!-- bootstrap css -->
       <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
       <!-- style css -->
@@ -39,25 +36,19 @@
                <div class="collapse navbar-collapse" id="navbarSupportedContent">
                   <ul class="navbar-nav ml-auto">
                      <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
+                        <a class="nav-link" href="index.html">主页</a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link" href="about.html">About</a>
+                        <a class="nav-link" href="index.html#feature_section">特征</a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link" href="apps.html">Apps</a>
+                        <a class="nav-link" href="index.html#api_section">API文档</a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link" href="feature.html">Feature</a>
+                        <a class="nav-link" href="blog.html">博客</a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link" href="blog.html">Blog</a>
-                     </li>
-                     <li class="nav-item">
-                        <a class="nav-link" href="client.html">Client</a>
-                     </li>
-                     <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
+                        <a class="nav-link" href="contact.html">联系我们</a>
                      </li>
                   </ul>
                   <form class="form-inline my-2 my-lg-0">
@@ -74,35 +65,50 @@
       <div class="contact_section layout_padding">
          <div class="container">
             <div class="row">
-               <div class="col-sm-12">
-                  <h1 class="contact_taital contact_heading">Contact Us</h1>
+               <div class="col-sm-12 text-center">
+                  <h1 class="contact_taital contact_heading">联系我们</h1>
+                  <p style="color:#888; font-size:16px; margin-bottom:50px;">扫码添加微信，或通过以下方式与灵眸（LMU AI）团队取得联系</p>
                </div>
             </div>
-            <div class="contact_section_2">
-               <div class="row">
-                  <div class="col-md-12">
-                     <div class="mail_section map_form_container">
-                        <form action="">
-                           <input type="text" class="mail_text" placeholder="Your Name" name="Your Name">
-                           <input type="text" class="mail_text" placeholder="Email" name="Email">
-                           <textarea class="massage-bt" placeholder="Massage" rows="5" id="comment" name="Massage"></textarea>
-                           <div class="contact_btn_main">
-                              <div class="send_bt"><a href="#">Send</a></div>
-                              <div class="map_bt active"><a href="#" id="showMap">Map</a></div>
-                           </div>
-                        </form>
-                        <div class="map_main map_container">
-                           <div class="map-responsive">
-                              <iframe src="https://www.amap.com/" sandbox="" width="600" height="368" frameborder="0" style="border:0; width: 100%;" allowfullscreen=""></iframe>
-                              <div class="btn_main">
-                                 <div class="map_bt d-flex justify-content-center w-100 map_center"><a href="#" id="showForm">Form</a></div>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
+
+            <!-- QR codes row -->
+            <div class="row justify-content-center" style="margin-bottom:50px;">
+               <div class="col-md-4 col-sm-6 text-center" style="margin-bottom:30px;">
+                  <div class="contact_card">
+                     <div class="contact_card_icon"><i class="fa fa-wechat"></i></div>
+                     <img src="images/sales-wechat-qr.png" alt="微信客服二维码" class="contact_qr">
+                     <h4 class="contact_card_title">微信客服</h4>
+                     <p class="contact_card_desc">扫码添加微信，直接与我们沟通</p>
+                  </div>
+               </div>
+               <div class="col-md-4 col-sm-6 text-center" style="margin-bottom:30px;">
+                  <div class="contact_card">
+                     <div class="contact_card_icon"><i class="fa fa-rss"></i></div>
+                     <img src="images/wechat-official-qr.png" alt="公众号二维码" class="contact_qr">
+                     <h4 class="contact_card_title">微信公众号</h4>
+                     <p class="contact_card_desc">关注公众号，获取最新产品动态</p>
                   </div>
                </div>
             </div>
+
+            <!-- Info cards row -->
+            <div class="row justify-content-center">
+               <div class="col-md-3 col-sm-6 text-center" style="margin-bottom:24px;">
+                  <div class="contact_info_card">
+                     <i class="fa fa-phone contact_info_icon"></i>
+                     <h5 class="contact_info_label">联系电话</h5>
+                     <a href="tel:18599001010" class="contact_info_value">185-9900-1010</a>
+                  </div>
+               </div>
+               <div class="col-md-3 col-sm-6 text-center" style="margin-bottom:24px;">
+                  <div class="contact_info_card">
+                     <i class="fa fa-envelope contact_info_icon"></i>
+                     <h5 class="contact_info_label">邮箱地址</h5>
+                     <a href="mailto:noreply@fulitimes.com" class="contact_info_value">noreply@fulitimes.com</a>
+                  </div>
+               </div>
+            </div>
+
          </div>
       </div>
       <!-- contact section end -->
@@ -116,53 +122,49 @@
             </div>
             <div class="row">
                <div class="col-lg-3 col-sm-6">
-                  <h3 class="useful_text">About</h3>
-                  <p class="footer_text">using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors</p>
+                  <h3 class="useful_text">关于我们</h3>
+                  <p class="footer_text">灵眸（LMU.AI）整合多种AI模型，提供企业级知识库、AI助手与API聚合服务，已通过国家生成式人工智能服务备案。</p>
                </div>
                <div class="col-lg-3 col-sm-6">
-                  <h3 class="useful_text">Apps</h3>
+                  <h3 class="useful_text">产品</h3>
                   <div class="footer_menu">
                      <ul>
-                        <li><a href="#">Liodeno</a></li>
-                        <li><a href="#">Jokri</a></li>
-                        <li><a href="#">Begana</a></li>
-                        <li><a href="#">Sell</a></li>
-                        <li><a href="#">Products</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="https://ai.fulitimes.com/model/share" target="_blank">LMU AI 平台</a></li>
+                        <li><a href="https://clawapi.fulitimes.com/home" target="_blank">OpenClaw API</a></li>
+                        <li><a href="https://betaflow.fulitimes.com/" target="_blank">BetaFlow 内测</a></li>
+                        <li><a href="https://fupan.fulitimes.com/" target="_blank">复盘·A股量化</a></li>
+                        <li><a href="contact.html">联系我们</a></li>
                      </ul>
                   </div>
                </div>
                <div class="col-lg-3 col-sm-6">
-                  <h1 class="useful_text">Contact us</h1>
+                  <h1 class="useful_text">联系方式</h1>
                   <div class="location_text">
                      <ul>
                         <li>
-                           <a href="#">
-                           <i class="fa fa-phone" aria-hidden="true"></i><span class="padding_left_10">+01 1234567890</span>
+                           <a href="tel:18599001010">
+                           <i class="fa fa-phone" aria-hidden="true"></i><span class="padding_left_10">185-9900-1010</span>
                            </a>
                         </li>
                         <li>
-                           <a href="#">
-                           <i class="fa fa-envelope" aria-hidden="true"></i><span class="padding_left_10">demo@gmail.com</span>
+                           <a href="mailto:noreply@fulitimes.com">
+                           <i class="fa fa-envelope" aria-hidden="true"></i><span class="padding_left_10">noreply@fulitimes.com</span>
                            </a>
                         </li>
                      </ul>
                   </div>
                   <div class="footer_social_icon">
                      <ul>
-                        <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                        <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                        <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                        <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-weixin" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-weibo" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-github" aria-hidden="true"></i></a></li>
                      </ul>
                   </div>
                </div>
                <div class="col-lg-3 col-sm-6">
-                  <h1 class="useful_text">Newsletter</h1>
-                  <div class="form-group">
-                     <textarea class="update_mail" placeholder="Your Email" rows="5" id="comment" name="Your Email"></textarea>
-                     <div class="subscribe_bt"><a href="#"><img src="images/teligram-icon.png"></a></div>
-                  </div>
+                  <h1 class="useful_text">扫码关注</h1>
+                  <p class="footer_text" style="margin:0 0 12px;">关注公众号，获取最新产品动态与AI资讯。</p>
+                  <img src="images/wechat-official-qr.png" alt="公众号二维码" style="width:100px;height:100px;border-radius:6px;border:2px solid rgba(255,255,255,0.2);">
                </div>
             </div>
          </div>
@@ -171,7 +173,10 @@
       <!-- copyright section start -->
       <div class="copyright_section">
          <div class="container">
-            <p class="copyright_text">&copy; All Rights Reserved. <a target="_blank" href="http://www.mobanwang.com/" title="网页模板">网页模板</a></p>
+            <p class="copyright_text"> Copyright&copy;2024 LMU.AI Inc &nbsp;|&nbsp;
+               <a target="_blank" href="https://beian.miit.gov.cn/" title="京ICP备2020034311号-3">京ICP备2020034311号-3</a>
+               &nbsp;|&nbsp; 生成式人工智能服务备案号：Beijing-LMUAI-20251201S0138
+            </p>
          </div>
       </div>
       <!-- copyright section end -->

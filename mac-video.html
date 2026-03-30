@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI视频生成大模型部署报价单 | 成果导向版</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #F8F9FA;
+            --card-bg: rgba(255, 255, 255, 0.9);
+            --accent-blue: #007AFF;
+            --accent-purple: #AF52DE;
+            --text-primary: #1D1D1F;
+            --text-secondary: #48484A;
+            --border-color: rgba(0, 0, 0, 0.1);
+            --glass-blur: 20px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            overflow-x: hidden;
+            line-height: 1.5;
+        }
+
+        .background-blobs {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: radial-gradient(circle at 15% 15%, rgba(0, 122, 255, 0.05) 0%, transparent 40%),
+                        radial-gradient(circle at 85% 85%, rgba(175, 82, 222, 0.05) 0%, transparent 40%);
+            filter: blur(120px);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 80px 24px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 70px;
+        }
+
+        h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: clamp(2.2rem, 4vw, 3rem);
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #000;
+            letter-spacing: -0.03em;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto;
+            font-weight: 400;
+        }
+
+        /* Pricing Cards */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-bottom: 80px;
+        }
+
+        .pricing-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(var(--glass-blur));
+            -webkit-backdrop-filter: blur(var(--glass-blur));
+            border: 1px solid var(--border-color);
+            border-radius: 30px;
+            padding: 45px 35px;
+            display: flex;
+            flex-direction: column;
+            transition: all 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+            position: relative;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.08);
+            border-color: var(--accent-blue);
+        }
+
+        .pricing-card.featured {
+            box-shadow: 0 20px 50px rgba(0, 122, 255, 0.12);
+            border: 2px solid var(--accent-blue);
+        }
+
+        .pricing-card.featured::before {
+            content: "最佳生产力选择";
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--accent-blue);
+            color: white;
+            font-size: 13px;
+            font-weight: 600;
+            padding: 6px 20px;
+            border-radius: 20px;
+            box-shadow: 0 4px 12px rgba(0, 122, 255, 0.3);
+        }
+
+        .tier-header { margin-bottom: 25px; }
+
+        .tier-name {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.7rem;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+        .tier-tagline {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        .price-container {
+            margin-bottom: 35px;
+            display: flex;
+            align-items: baseline;
+        }
+
+        .price {
+            font-size: 3.2rem;
+            font-weight: 700;
+            font-family: 'Outfit', sans-serif;
+            color: #000;
+        }
+
+        .currency {
+            font-size: 1.5rem;
+            margin-right: 6px;
+            font-weight: 600;
+        }
+
+        .features-list {
+            list-style: none;
+            margin-bottom: 30px;
+            flex-grow: 1;
+        }
+
+        .features-list li {
+            font-size: 1.05rem;
+            color: #333;
+            margin-bottom: 18px;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .features-list li b {
+            color: #000;
+            font-weight: 600;
+        }
+
+        .features-list li::before {
+            content: "●";
+            color: var(--accent-blue);
+            margin-right: 14px;
+            font-size: 0.8rem;
+            margin-top: 4px;
+        }
+
+        /* Footer & Brand */
+        .page-footer {
+            margin-top: 80px;
+            border-top: 1px solid var(--border-color);
+            padding-top: 40px;
+        }
+
+        .service-info {
+            background: #fff;
+            border-radius: 20px;
+            padding: 30px;
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            margin-bottom: 40px;
+            border: 1px solid var(--border-color);
+        }
+
+        .service-info b { color: #000; }
+
+        .brand-copyright {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            padding: 20px 0;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .footer-left {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .brand-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: #000;
+        }
+
+        .brand-copyright div {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .footer-right {
+            text-align: right;
+        }
+
+        @media (max-width: 768px) {
+            .pricing-grid { grid-template-columns: 1fr; }
+            .brand-copyright { flex-direction: column; align-items: flex-start; }
+            .footer-right { text-align: left; }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="background-blobs"></div>
+
+    <div class="container">
+        <header>
+            <h1>AI 视频大模型本地化部署服务</h1>
+            <p class="subtitle">让 Apple Mac Studio 进化为顶尖的工业级 AI 视频创作核心</p>
+        </header>
+
+        <div class="pricing-grid">
+            <!-- Entry Tier -->
+            <div class="pricing-card">
+                <div class="tier-header">
+                    <div class="tier-name">创意启航版</div>
+                    <div class="tier-tagline">开启您的 AI 视频创作之旅</div>
+                </div>
+                <div class="price-container">
+                    <span class="currency">¥</span>
+                    <span class="price">12,800</span>
+                </div>
+                <ul class="features-list">
+                    <li><span><b>快速上手：</b> 零门槛部署 ComfyUI，内置开箱即用的标准出片流程</span></li>
+                    <li><span><b>硬件潜能激发：</b> 针对 M3/M4 Ultra 深度优化，确保持续稳定的创作环境</span></li>
+                    <li><span><b>精选创作模型：</b> 预置主流视频生成模型，涵盖多种视觉艺术风格</span></li>
+                    <li><span><b>全程无忧支持：</b> 7天专家级环境调优与排障，保障项目顺利开启</span></li>
+                </ul>
+            </div>
+
+            <!-- Professional Tier -->
+            <div class="pricing-card featured">
+                <div class="tier-header">
+                    <div class="tier-name">商业生产版</div>
+                    <div class="tier-tagline">为高效率、高品质商业出片而生</div>
+                </div>
+                <div class="price-container">
+                    <span class="currency">¥</span>
+                    <span class="price">19,800</span>
+                </div>
+                <ul class="features-list">
+                    <li><span><b>全能创作环境：</b> macOS + Windows 双生态，完美兼顾加速渲染与传统生产力</span></li>
+                    <li><span><b>商业级画质倍增：</b> 深度集成 AI 超分与细节增强算法，产出符合商业交付标准的高清视觉作品</span></li>
+                    <li><span><b>精准控制流：</b> 提供图生视频 (I2V) 与局部精确修补，让创意按您的想法延伸</span></li>
+                    <li><span><b>沉浸式交付：</b> 包含实地全员实操培训，确保您的团队快速形成战斗力</span></li>
+                </ul>
+            </div>
+
+            <!-- Studio Elite Tier -->
+            <div class="pricing-card">
+                <div class="tier-header">
+                    <div class="tier-name">工业视频动力工场</div>
+                    <div class="tier-tagline">打造自动化的视频工业生产流水线</div>
+                </div>
+                <div class="price-container">
+                    <span class="currency">¥</span>
+                    <span class="price">32,800<span style="font-size: 1.4rem; color: var(--text-secondary); font-weight: 400;"> 起</span></span>
+                </div>
+                <ul class="features-list">
+                    <li><span><b>24/7 自动产出：</b> 部署全自动无人值守队列，让您的机器在非工作时间持续创造价值</span></li>
+                    <li><span><b>多级集群协作：</b> 整合多台设备算力，打造极速渲染阵列，缩短大型项目周期</span></li>
+                    <li><span><b>企业资产聚合：</b> 搭建智能素材管理库，实现海量创意资产的秒级检索与重用</span></li>
+                    <li><span><b>专属专家咨询：</b> 90天高级顾问支持，为您量身定制专属 AI 节点与业务流程</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="page-footer">
+            <div class="service-info">
+                <p><b>服务说明：</b></p>
+                <p>1. 以上报价为纯技术服务费。建议硬件环境：M3/M4 Ultra + 128GB 及以上统一内存。</p>
+                <p>2. 各版本均包含完整的交付技术文档与系统镜像备份，确保环境的可恢复性与传承性。</p>
+            </div>
+
+            <div class="brand-copyright">
+                <div class="footer-left">
+                    <div class="brand-title">北京心彩未来科技有限公司</div>
+                    <div>OpenClaw - 灵眸AI (LMU AI) | 致力于企业级真实自动化落地</div>
+                </div>
+                <div class="footer-right">
+                    <div style="font-weight: 700; color: #000; font-size: 15px; margin-bottom: 4px;">微信、电话：18599001010</div>
+                    <div>邮箱：xiaochuan@fulitimes.com</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

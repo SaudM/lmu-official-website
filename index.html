@@ -33,11 +33,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"><!--mobile metas-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1"><!--site metas--><title>
-    ·LMU.AI原生AI应用平台，企业AI知识库，AI助手平台·</title>
+    灵眸·LMU.AI 原生AI应用平台，企业AI知识库，AI助手平台</title>
     <meta name="keywords"
-          content="AI助手, AI工具, GPT-4, Claude2, Gemini, AI文案, 企业AI, 智能助手, AI知识库, 文档支持">
+          content="灵眸, LMU AI, AI助手, AI工具, GPT-4, Claude, Gemini, AI文案, 企业AI, 智能助手, AI知识库, 文档支持, OpenClaw, BetaFlow">
     <meta name="description"
-          content="LMU AI 提供全面的 AI 工具和助手，支持基于 ChatGPT、Claude、Gemini 等模型创建 AI 应用，并通过开放 API 接入其他软件。支持 PDF、Word、Excel 等多种文档格式，提高工作和生活效率。">
+          content="灵眸（LMU AI）提供全面的 AI 工具和助手，支持基于 ChatGPT、Claude、Gemini 等模型创建 AI 应用，并通过开放 API 接入其他软件。已通过国家生成式人工智能服务备案，支持 PDF、Word、Excel 等多种文档格式，提高工作和生活效率。">
     <meta name="author" content="LMU, Inc."><!--bootstrap css-->
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"><!--style css-->
     <link rel="stylesheet" type="text/css" href="css/style.css"><!--Responsive-->
@@ -64,6 +64,34 @@
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item"><a class="nav-link" href="index.html">主页</a></li><!--<li class="nav-item">-->
                     <!--<a class="nav-link"href="about.html">关于</a>--><!--</li>-->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navProductDropdown" role="button"
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">产品</a>
+                        <div class="dropdown-menu" aria-labelledby="navProductDropdown"
+                             style="background:#282727; border:none; border-radius:8px; min-width:180px;">
+                            <a class="dropdown-item" href="https://ai.fulitimes.com/model/share" target="_blank"
+                               style="color:#fefefd; padding:10px 20px; font-size:15px;">
+                                <i class="fa fa-magic" aria-hidden="true" style="margin-right:8px; color:#f75b59;"></i>AI 知识库
+                            </a>
+                            <a class="dropdown-item" href="https://clawapi.fulitimes.com/home" target="_blank"
+                               style="color:#fefefd; padding:10px 20px; font-size:15px;">
+                                <i class="fa fa-bolt" aria-hidden="true" style="margin-right:8px; color:#f75b59;"></i>大模型 API
+                            </a>
+                            <a class="dropdown-item" href="https://betaflow.fulitimes.com/" target="_blank"
+                               style="color:#fefefd; padding:10px 20px; font-size:15px;">
+                                <i class="fa fa-flask" aria-hidden="true" style="margin-right:8px; color:#f75b59;"></i>软件内测管理
+                            </a>
+                            <a class="dropdown-item" href="https://fupan.fulitimes.com/" target="_blank"
+                               style="color:#fefefd; padding:10px 20px; font-size:15px;">
+                                <i class="fa fa-cogs" aria-hidden="true" style="margin-right:8px; color:#f75b59;"></i>AI量化策略
+                            </a>
+                            <div class="dropdown-divider" style="border-color:rgba(255,255,255,0.1);"></div>
+                            <a class="dropdown-item" href="contact.html"
+                               style="color:#fefefd; padding:10px 20px; font-size:15px;">
+                                <i class="fa fa-server" aria-hidden="true" style="margin-right:8px; color:#f75b59;"></i>OpenClaw 技术落地
+                            </a>
+                        </div>
+                    </li>
                     <li class="nav-item"><a class="nav-link" id="scrollToFeatures">特征</a></li>
                     <li class="nav-item"><a class="nav-link"
                                             href="https://vmoo.saud.net.cn/published/lmu/API%E6%8E%A5%E5%85%A5/%E5%BA%94%E7%94%A8%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C.md">API文档</a>
@@ -148,7 +176,7 @@
                     <div class="about_box">
                         <div class="about_box_left">
                             <div><img src="images/icon-1.png"></div>
-                            <h5 class="android_text">GPT-o4</h5><h5 class="ios_text">更聪明</h5></div>
+                            <h5 class="android_text">GPT-5</h5><h5 class="ios_text">更聪明</h5></div>
                         <div class="about_box_right">
                             <div><img src="images/icon-2.png"></div>
                             <h5 class="android_text">Claude4</h5><h5 class="ios_text">长内容</h5></div>
@@ -156,7 +184,7 @@
                     <div class="about_box_2">
                         <div class="about_box_left">
                             <div><img src="images/icon-3.png"></div>
-                            <h5 class="android_text">Gemini-2.5</h5><h5 class="ios_text">更平衡</h5></div>
+                            <h5 class="android_text">Gemini-3.1</h5><h5 class="ios_text">更平衡</h5></div>
                         <div class="about_box_right">
                             <div><img src="images/icon-4.png"></div>
                             <h5 class="android_text">LMU</h5><h5 class="ios_text">更自由</h5></div>
@@ -265,7 +293,73 @@
         <!--</div>-->
 
     </div>
-</div><!--pricing section end--><!--testimonial section start-->
+</div><!--pricing section end-->
+
+<!--ecosystem section start-->
+<div class="ecosystem_section layout_padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="ecosystem_taital">我们的产品生态</h1>
+                <p class="ecosystem_text">覆盖 AI 应用、API 服务、内测管理、量化投资与企业技术落地</p>
+            </div>
+        </div>
+        <div class="row ecosystem_cards" style="margin-top:40px;">
+            <!-- AI 知识库 -->
+            <div class="col-md-4 col-sm-6 ecosystem_col">
+                <div class="eco_card">
+                    <div class="eco_icon"><i class="fa fa-magic"></i></div>
+                    <h4 class="eco_name">AI 知识库</h4>
+                    <p class="eco_desc">企业级AI知识库与原生应用平台，支持 ChatGPT、Claude、Gemini 等多种大模型，快速搭建专属 AI 助手。</p>
+                    <div class="eco_tag">已备案</div>
+                    <a href="https://ai.fulitimes.com/model/share" target="_blank" class="eco_btn">免费试用</a>
+                </div>
+            </div>
+            <!-- OpenClaw API -->
+            <div class="col-md-4 col-sm-6 ecosystem_col">
+                <div class="eco_card">
+                    <div class="eco_icon"><i class="fa fa-bolt"></i></div>
+                    <h4 class="eco_name">大模型 API</h4>
+                    <p class="eco_desc">大模型 API 聚合平台，提供国产 + 海外主流 LLM Token，支持 OpenClaw、Claude Code 等工具接入。</p>
+                    <div class="eco_tag">即开即用</div>
+                    <a href="https://clawapi.fulitimes.com/home" target="_blank" class="eco_btn">立即开通</a>
+                </div>
+            </div>
+            <!-- BetaFlow -->
+            <div class="col-md-4 col-sm-6 ecosystem_col">
+                <div class="eco_card">
+                    <div class="eco_icon"><i class="fa fa-flask"></i></div>
+                    <h4 class="eco_name">软件内测管理</h4>
+                    <p class="eco_desc">AI 产品内测管理 SaaS，一行 SDK 集成，3 分钟完成部署，数据库独立，对原有项目零逻辑侵入。</p>
+                    <div class="eco_tag">SDK 接入</div>
+                    <a href="https://betaflow.fulitimes.com/" target="_blank" class="eco_btn">了解更多</a>
+                </div>
+            </div>
+            <!-- 浮盘量化 -->
+            <div class="col-md-4 col-sm-6 ecosystem_col">
+                <div class="eco_card">
+                    <div class="eco_icon"><i class="fa fa-cogs"></i></div>
+                    <h4 class="eco_name">AI量化策略</h4>
+                    <p class="eco_desc">基于 AI 的 A 股量化策略平台，智能选股、策略回测、实时信号推送，让投资决策更数据驱动。</p>
+                    <div class="eco_tag">量化投资</div>
+                    <a href="https://fupan.fulitimes.com/" target="_blank" class="eco_btn">进入平台</a>
+                </div>
+            </div>
+            <!-- OpenClaw 技术落地 -->
+            <div class="col-md-4 col-sm-6 ecosystem_col">
+                <div class="eco_card eco_card_cta">
+                    <div class="eco_icon"><i class="fa fa-server"></i></div>
+                    <h4 class="eco_name">OpenClaw 技术落地</h4>
+                    <p class="eco_desc">企业私有化 AI 部署服务，覆盖 AI 视频生成、图文电商、园区智慧运营等场景，提供定制化解决方案。</p>
+                    <div class="eco_tag">预约演示</div>
+                    <a href="contact.html" class="eco_btn">联系我们</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><!--ecosystem section end-->
+
+<!--testimonial section start-->
 <div class="customer_section layout_padding">
     <div class="container">
         <div class="row">
@@ -367,12 +461,12 @@
         </div>
         <div class="row">
             <div class="col-lg-3 col-sm-6"><h3 class="useful_text">关于</h3>
-                <p class="footer_text">LMU.AI整合多种AI模型，轻松创建和管理您的私有数据，提升业务竞争力。</p></div>
+                <p class="footer_text">灵眸（LMU.AI）整合多种AI模型，轻松创建和管理您的私有数据，提升业务竞争力。已通过国家生成式人工智能服务备案。</p></div>
             <div class="col-lg-3 col-sm-6"><h3 class="useful_text">Apps</h3>
                 <div class="footer_menu">
                     <ul>
-                        <li><a href="https://ai.fulitimes.com/chat?modelId=6475b0c9a2f71ceba41c5134">GPT-o4</a></li>
-                        <li><a href="https://ai.fulitimes.com/chat?modelId=657ffaf9270528e806dfb48c">Gemini 2.5 Pro</a>
+                        <li><a href="https://ai.fulitimes.com/chat?modelId=6475b0c9a2f71ceba41c5134">GPT-5</a></li>
+                        <li><a href="https://ai.fulitimes.com/chat?modelId=657ffaf9270528e806dfb48c">Gemini 3.1 Pro</a>
                         </li>
                         <li><a href="https://ai.fulitimes.com/chat?modelId=658a6f2c4b8a7747395fc533">ChatGPT-币市预测</a>
                         </li>
@@ -381,6 +475,9 @@
                         </li>
                         <li><a href="https://ai.fulitimes.com/chat?modelId=6656e28a02e9172b8972db6d">卡通头像生成</a>
                         </li>
+                        <li><a href="https://clawapi.fulitimes.com/home" target="_blank">大模型 API</a></li>
+                        <li><a href="https://betaflow.fulitimes.com/" target="_blank">软件内测管理</a></li>
+                        <li><a href="https://fupan.fulitimes.com/" target="_blank">AI量化策略</a></li>
                     </ul>
                 </div>
             </div>
@@ -444,10 +541,9 @@
     </div>
 </div><!--footer section end--><!--copyright section start-->
 <div class="copyright_section">
-    <div class="container"><p class="copyright_text"> Copyright&copy;2024 LMU.AI Inc <a target="_blank"
-                                                                                        href="https://beian.miit.gov.cn/"
-                                                                                        title="京ICP备2020034311号-3">
-        京ICP备2020034311号-3 </a>
+    <div class="container"><p class="copyright_text"> Copyright&copy;2024 LMU.AI Inc &nbsp;|&nbsp;
+        <a target="_blank" href="https://beian.miit.gov.cn/" title="京ICP备2020034311号-3">京ICP备2020034311号-3</a>
+        &nbsp;|&nbsp; 生成式人工智能服务备案号：Beijing-LMUAI-20251201S0138
     </p></div>
 </div><!--copyright section end--><!--Javascript files-->
 <script src="js/jquery.min.js"></script>
@@ -473,36 +569,29 @@ gtag('config', 'G-4G08Y1R1RE')</script>
 
 <!-- 3D Particle System Script -->
 <script>
-// 3D粒子系统配置
+// AI神经网络粒子系统 —— 与背景暖色调融合，体现AI主题
 class ParticleSystem {
     constructor() {
         this.canvas = document.getElementById('three-canvas');
         this.scene = new THREE.Scene();
-        this.camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        this.camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.1, 1000);
         this.renderer = new THREE.WebGLRenderer({ canvas: this.canvas, alpha: true, antialias: true });
-        this.particles = [];
-        this.particleCount = 100; // 调整为100个粒子
+        this.particleCount = 80;
         this.mouse = { x: 0, y: 0 };
-        this.connections = [];
+        this.time = 0;
 
         this.init();
     }
 
     init() {
-        // 设置渲染器
         this.renderer.setSize(window.innerWidth, window.innerHeight);
         this.renderer.setClearColor(0x000000, 0);
+        this.renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+        this.camera.position.z = 120;
 
-        // 设置相机位置
-        this.camera.position.z = 100;
-
-        // 创建粒子
         this.createParticles();
-
-        // 添加事件监听
+        this.createConnections();
         this.addEventListeners();
-
-        // 开始动画循环
         this.animate();
     }
 
@@ -510,69 +599,76 @@ class ParticleSystem {
         const geometry = new THREE.BufferGeometry();
         const positions = new Float32Array(this.particleCount * 3);
         const colors = new Float32Array(this.particleCount * 3);
+        const sizes = new Float32Array(this.particleCount);
         const velocities = [];
+        const phases = [];
 
         for (let i = 0; i < this.particleCount; i++) {
-            // 随机位置
-            positions[i * 3] = (Math.random() - 0.5) * 200;
-            positions[i * 3 + 1] = (Math.random() - 0.5) * 100;
-            positions[i * 3 + 2] = (Math.random() - 0.5) * 100;
+            // 分布在横向宽、纵向适中的区域
+            positions[i * 3]     = (Math.random() - 0.5) * 220;
+            positions[i * 3 + 1] = (Math.random() - 0.5) * 90;
+            positions[i * 3 + 2] = (Math.random() - 0.5) * 40;
 
-            // 冷色系配色：与暖色背景形成对比，增强层次感
-            const colorVariant = Math.random();
-            if (colorVariant < 0.25) {
-                colors[i * 3] = 0.1; // R
-                colors[i * 3 + 1] = 0.3; // G
-                colors[i * 3 + 2] = 0.9; // B (深蓝色)
-            } else if (colorVariant < 0.5) {
-                colors[i * 3] = 0; // R
-                colors[i * 3 + 1] = 0.6; // G
-                colors[i * 3 + 2] = 0.8; // B (青色)
-            } else if (colorVariant < 0.75) {
-                colors[i * 3] = 0.4; // R
-                colors[i * 3 + 1] = 0.2; // G
-                colors[i * 3 + 2] = 0.9; // B (紫蓝色)
+            // 配色：暖白 / 淡金 / 浅橙，与背景暖色调融合
+            const t = Math.random();
+            if (t < 0.45) {
+                // 暖白色（主体，最多）
+                colors[i * 3]     = 1.0;
+                colors[i * 3 + 1] = 0.95;
+                colors[i * 3 + 2] = 0.88;
+            } else if (t < 0.75) {
+                // 淡金橙色
+                colors[i * 3]     = 1.0;
+                colors[i * 3 + 1] = 0.75;
+                colors[i * 3 + 2] = 0.45;
             } else {
-                colors[i * 3] = 0.2; // R
-                colors[i * 3 + 1] = 0.5; // G
-                colors[i * 3 + 2] = 0.7; // B (钢蓝色)
+                // 柔和珊瑚红（与主题色 #f75b59 呼应）
+                colors[i * 3]     = 0.97;
+                colors[i * 3 + 1] = 0.45;
+                colors[i * 3 + 2] = 0.42;
             }
 
-            // 随机速度
+            // 粒子大小：大小不一，层次更丰富
+            sizes[i] = 1.5 + Math.random() * 2.5;
+
+            // 极慢的漂浮速度，避免突兀感
             velocities.push({
-                x: (Math.random() - 0.5) * 0.02,
-                y: (Math.random() - 0.5) * 0.02,
-                z: (Math.random() - 0.5) * 0.02
+                x: (Math.random() - 0.5) * 0.012,
+                y: (Math.random() - 0.5) * 0.008,
+                z: (Math.random() - 0.5) * 0.005
             });
+
+            // 每个粒子独立的呼吸相位
+            phases.push(Math.random() * Math.PI * 2);
         }
 
         geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
-        geometry.setAttribute('color', new THREE.BufferAttribute(colors, 3));
+        geometry.setAttribute('color',    new THREE.BufferAttribute(colors, 3));
 
-        // 粒子材质
         const material = new THREE.PointsMaterial({
-            size: 3,
+            size: 2.2,
             vertexColors: true,
             transparent: true,
-            opacity: 0.95,
-            blending: THREE.AdditiveBlending
+            opacity: 0.55,          // 整体偏透明，不抢眼
+            blending: THREE.AdditiveBlending,
+            depthWrite: false,
         });
 
         this.particleSystem = new THREE.Points(geometry, material);
         this.scene.add(this.particleSystem);
         this.velocities = velocities;
-
-        // 创建连线系统
-        this.createConnections();
+        this.phases = phases;
     }
 
     createConnections() {
         const lineGeometry = new THREE.BufferGeometry();
+        // 连线用极淡的暖白，若隐若现，体现神经网络
         const lineMaterial = new THREE.LineBasicMaterial({
-            color: 0x3498db,
+            color: 0xfff0e0,
             transparent: true,
-            opacity: 0.4,
-            blending: THREE.AdditiveBlending
+            opacity: 0.12,
+            blending: THREE.AdditiveBlending,
+            depthWrite: false,
         });
 
         this.lineSystem = new THREE.LineSegments(lineGeometry, lineMaterial);
@@ -582,20 +678,22 @@ class ParticleSystem {
     updateConnections() {
         const positions = this.particleSystem.geometry.attributes.position.array;
         const linePositions = [];
-        const maxDistance = 50; // 连线最大距离
+        const maxDist = 38; // 缩短连线距离，只连近邻，更像局部神经网络
 
         for (let i = 0; i < this.particleCount; i++) {
+            let links = 0;
             for (let j = i + 1; j < this.particleCount; j++) {
-                const dx = positions[i * 3] - positions[j * 3];
-                const dy = positions[i * 3 + 1] - positions[j * 3 + 1];
-                const dz = positions[i * 3 + 2] - positions[j * 3 + 2];
-                const distance = Math.sqrt(dx * dx + dy * dy + dz * dz);
-
-                if (distance < maxDistance) {
+                if (links >= 3) break; // 每个节点最多连3条线，避免过于密集
+                const dx = positions[i*3]   - positions[j*3];
+                const dy = positions[i*3+1] - positions[j*3+1];
+                const dz = positions[i*3+2] - positions[j*3+2];
+                const dist = Math.sqrt(dx*dx + dy*dy + dz*dz);
+                if (dist < maxDist) {
                     linePositions.push(
-                        positions[i * 3], positions[i * 3 + 1], positions[i * 3 + 2],
-                        positions[j * 3], positions[j * 3 + 1], positions[j * 3 + 2]
+                        positions[i*3], positions[i*3+1], positions[i*3+2],
+                        positions[j*3], positions[j*3+1], positions[j*3+2]
                     );
+                    links++;
                 }
             }
         }
@@ -605,13 +703,11 @@ class ParticleSystem {
     }
 
     addEventListeners() {
-        // 鼠标移动事件
-        window.addEventListener('mousemove', (event) => {
-            this.mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
-            this.mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
+        window.addEventListener('mousemove', (e) => {
+            this.mouse.x = (e.clientX / window.innerWidth)  * 2 - 1;
+            this.mouse.y = -(e.clientY / window.innerHeight) * 2 + 1;
         });
 
-        // 窗口大小调整
         window.addEventListener('resize', () => {
             this.camera.aspect = window.innerWidth / window.innerHeight;
             this.camera.updateProjectionMatrix();
@@ -621,47 +717,44 @@ class ParticleSystem {
 
     animate() {
         requestAnimationFrame(() => this.animate());
+        this.time += 0.008;
 
-        // 更新粒子位置
         const positions = this.particleSystem.geometry.attributes.position.array;
 
         for (let i = 0; i < this.particleCount; i++) {
-            // 基础运动
-            positions[i * 3] += this.velocities[i].x;
-            positions[i * 3 + 1] += this.velocities[i].y;
-            positions[i * 3 + 2] += this.velocities[i].z;
+            // 基础漂浮
+            positions[i*3]   += this.velocities[i].x;
+            positions[i*3+1] += this.velocities[i].y;
+            positions[i*3+2] += this.velocities[i].z;
 
-            // 边界反弹
-            if (positions[i * 3] > 100 || positions[i * 3] < -100) this.velocities[i].x *= -1;
-            if (positions[i * 3 + 1] > 50 || positions[i * 3 + 1] < -50) this.velocities[i].y *= -1;
-            if (positions[i * 3 + 2] > 50 || positions[i * 3 + 2] < -50) this.velocities[i].z *= -1;
+            // 加入正弦波动，让粒子像在"呼吸"
+            positions[i*3+1] += Math.sin(this.time + this.phases[i]) * 0.004;
 
-            // 鼠标交互效果
-            const mouseInfluence = 20;
-            const mouseX = this.mouse.x * 100;
-            const mouseY = this.mouse.y * 50;
+            // 边界软回弹（回到区域内）
+            if (positions[i*3]   >  110 || positions[i*3]   < -110) this.velocities[i].x *= -1;
+            if (positions[i*3+1] >   45 || positions[i*3+1] <  -45) this.velocities[i].y *= -1;
+            if (positions[i*3+2] >   20 || positions[i*3+2] <  -20) this.velocities[i].z *= -1;
 
-            const dx = mouseX - positions[i * 3];
-            const dy = mouseY - positions[i * 3 + 1];
-            const distance = Math.sqrt(dx * dx + dy * dy);
-
-            if (distance < mouseInfluence) {
-                const force = (mouseInfluence - distance) / mouseInfluence;
-                positions[i * 3] += dx * force * 0.01;
-                positions[i * 3 + 1] += dy * force * 0.01;
+            // 鼠标轻微排斥（不是吸引），距离远才有效，感觉自然
+            const mX = this.mouse.x * 110;
+            const mY = this.mouse.y * 45;
+            const dx = positions[i*3]   - mX;
+            const dy = positions[i*3+1] - mY;
+            const dist = Math.sqrt(dx*dx + dy*dy);
+            if (dist < 25 && dist > 0.1) {
+                const repel = (25 - dist) / 25 * 0.015;
+                positions[i*3]   += (dx / dist) * repel;
+                positions[i*3+1] += (dy / dist) * repel;
             }
         }
 
         this.particleSystem.geometry.attributes.position.needsUpdate = true;
 
-        // 更新连线
+        // 整体极缓慢漂移，无旋转（旋转感很突兀）
+        this.particleSystem.position.x = Math.sin(this.time * 0.05) * 1.5;
+        this.lineSystem.position.x = this.particleSystem.position.x;
+
         this.updateConnections();
-
-        // 旋转整个粒子系统
-        this.particleSystem.rotation.y += 0.001;
-        this.lineSystem.rotation.y += 0.001;
-
-        // 渲染场景
         this.renderer.render(this.scene, this.camera);
     }
 }
