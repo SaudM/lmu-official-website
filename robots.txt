@@ -4,4 +4,4 @@ Disallow: /xijian-fw-baojia-v2.html
 Disallow: /pricing-client-to-Image.html
 Disallow: /mac-video.html
 
-Sitemap: https://fulitimes.com/sitemap.xml
+Sitemap: https://lmuai.com/sitemap.xml
