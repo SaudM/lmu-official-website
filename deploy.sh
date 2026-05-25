@@ -6,9 +6,17 @@
 # ==============================================================================
 
 # Remote Server Configuration
-REMOTE_USER="work"
-REMOTE_HOST="47.92.165.32"
-REMOTE_PATH="/var/www/html/lum-web"
+
+# REMOTE_USER="work"
+# REMOTE_HOST="47.92.165.32"
+# REMOTE_PATH="/var/www/html/lum-web"
+# LOCAL_PATH="./" # Current directory
+# BUILD_DIR=".deploy_build"
+
+
+REMOTE_USER="ubuntu"
+REMOTE_HOST="152.70.239.46"
+REMOTE_PATH="/var/www/html/lmu"
 LOCAL_PATH="./" # Current directory
 BUILD_DIR=".deploy_build"
 
