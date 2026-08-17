@@ -28,3 +28,34 @@
 .contact_info_label{font-size:13px;color:#999;font-weight:bold;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:6px;padding:0}
 .contact_info_value{font-size:16px;color:#232222;font-weight:bold;word-break:break-all}
 .contact_info_value:hover{color:#f75b59}
+
+/* ===== 法律条款页（terms/privacy/minors/refund/cookies）===== */
+.legal_section{width:100%;float:left;background:#f9f9f8;padding:70px 0 80px}
+.legal_doc{max-width:860px;margin:0 auto;background:#fff;border-radius:12px;box-shadow:0 4px 24px rgba(0,0,0,0.06);padding:48px 56px}
+.legal_back{display:inline-block;font-size:14px;color:#8e8e8e;margin-bottom:22px;text-decoration:none}
+.legal_back:hover{color:#f75b59}
+.legal_doc h1{font-size:30px;color:#232222;font-weight:bold;margin:0 0 8px;padding-bottom:0}
+.legal_meta{font-size:14px;color:#8e8e8e;margin:0 0 30px;padding-bottom:20px;border-bottom:1px solid #efefef}
+.legal_doc h2{font-size:20px;color:#232222;font-weight:bold;margin:36px 0 14px;padding-left:12px;border-left:4px solid #f75b59;line-height:1.4}
+.legal_doc h3{font-size:16px;color:#282727;font-weight:bold;margin:22px 0 8px}
+.legal_doc p{font-size:15px;color:#4f4e4e;line-height:1.9;margin:0 0 14px}
+.legal_doc ul,.legal_doc ol{margin:0 0 16px;padding-left:22px}
+.legal_doc li{font-size:15px;color:#4f4e4e;line-height:1.9;margin-bottom:8px}
+.legal_doc strong{color:#232222;font-weight:bold}
+.legal_doc a{color:#f75b59;text-decoration:none}
+.legal_doc a:hover{color:#282727;text-decoration:underline}
+@media (max-width:768px){.legal_section{padding:40px 0 50px}.legal_doc{padding:28px 20px}.legal_doc h1{font-size:24px}.legal_doc h2{font-size:18px}}
+
+/* ===== 底部版权条：版权 + 法律链接 + 备案号 ===== */
+.copyright_wrap{width:100%;float:left;display:flex;flex-direction:column;gap:2px;padding:12px 0}
+.copyright_row{width:100%;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:4px 24px;font-size:14px;line-height:1.7;color:#fff}
+.copyright_owner{white-space:nowrap}
+.footer_legal_links{display:flex;flex-wrap:wrap;justify-content:flex-end;align-items:baseline;margin-left:auto;position:relative;top:1px}/* 置于备案行行尾；CJK 字形略高于基线，下移 1px 与备案数字底部光学对齐 */
+.footer_legal_links a{display:inline-block;color:#fff;font-size:13px;line-height:1.7;padding:0 9px;position:relative;opacity:0.92;text-decoration:none}
+.footer_legal_links a:hover{color:#fff;opacity:1;text-decoration:underline}
+.footer_legal_links a:not(:last-child)::after{content:"";position:absolute;right:0;top:50%;transform:translateY(-50%);width:1px;height:11px;background:rgba(255,255,255,0.4)}
+.copyright_beian{width:100%;display:flex;flex-wrap:wrap;align-items:baseline;gap:2px 18px;font-size:12px;line-height:1.7;color:rgba(255,255,255,0.75)}
+.copyright_beian a{color:rgba(255,255,255,0.75);white-space:nowrap;text-decoration:none}
+.copyright_beian a:hover{color:#fff}
+.copyright_beian span{white-space:nowrap}
+@media (max-width:767px){.copyright_row{justify-content:center}.footer_legal_links{justify-content:center;margin-left:0}.copyright_beian{justify-content:center;gap:2px 12px}}
