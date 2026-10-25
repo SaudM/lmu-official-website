@@ -19,6 +19,7 @@ VERSION=$(date +%Y%m%d%H%M%S)
 EXCLUDE_PATTERNS=(
     ".git*"
     ".idea"
+    ".claude"
     ".vscode"
     ".DS_Store"
     "deploy.sh"
